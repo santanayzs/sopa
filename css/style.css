@@ -1,0 +1,155 @@
+/* --- CONFIGURAÇÃO GERAL --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  gap: 20px;
+  padding: 20px;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* --- CARDS DO SISTEMA --- */
+.cardapio,
+.carrinho,
+.titulocep {
+  /* Unificando o padrão visual dos cards */
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardapio {
+  flex: 2;
+  min-width: 350px;
+}
+
+.carrinho {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* --- SEÇÃO DE CONSULTA CEP (Otimizado) --- */
+.titulocep {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px; /* Evita que o card do CEP fique gigante horizontalmente */
+  height: fit-content; /* Ajusta a altura de acordo com o conteúdo */
+}
+
+.titulocep h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Container do Formulário */
+.formcep {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+/* Estilização dos Inputs e Labels */
+.formcep label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.formcep input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formcep input[type="text"]:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+/* Inputs de resultado em modo somente leitura (readonly) */
+.resultado input[readonly] {
+  background-color: #f8f9fa;
+  color: #495057;
+  border-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* --- BOTÕES --- */
+button {
+  cursor: pointer;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  width: 100%; /* Botões ocupam a largura total do container */
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: #218838;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-limpar {
+  background: #dc3545;
+  margin-top: 5px;
+}
+
+.btn-limpar:hover {
+  background: #c82333;
+}
+
+.btn-pagar {
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* --- COMPONENTES DE ITENS --- */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+#qrcode-area {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  border: 2px dashed #009ee3;
+  padding: 15px;
+  border-radius: 8px;
+}
