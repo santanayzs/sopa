@@ -91,7 +91,6 @@
 
     <button onclick="limpar()" class="btn-limpar">Limpar</button>
 </div>
-<h1>TESTE PULL</h1>
 <script>
     // ── Carrinho ──────────────────────────────────────────
     let carrinho = [];
