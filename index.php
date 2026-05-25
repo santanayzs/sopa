@@ -61,6 +61,8 @@
 </div>
     <button onclick="limpar()" class="btn-limpar">Limpar</button>
 </div>
+<h1>vai tomando
+</h1>
 <script>    
     function mascaraCEP(input) {
         // Remove tudo que não for número
